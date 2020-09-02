@@ -1,5 +1,7 @@
 package com.shivam;
 
+import java.util.Arrays;
+
 public class Student {
 
 	private int id;
@@ -9,6 +11,32 @@ public class Student {
 	private String lastName;
 	
 	private boolean active;
+	
+	private Address address;
+	
+	private String languages[];
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", active=" + active
+				+ ", address=" + address + ", languages=" + Arrays.toString(languages) + "]";
+	}
+
+	public String[] getLanguages() {
+		return languages;
+	}
+
+	public void setLanguages(String[] languages) {
+		this.languages = languages;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
 	public int getId() {
 		return id;

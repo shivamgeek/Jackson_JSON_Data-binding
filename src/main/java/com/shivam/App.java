@@ -16,9 +16,10 @@ public class App
     	try {
     		ObjectMapper mapper  = new ObjectMapper();
     		
-    		Student s = mapper.readValue(new File("data/sample-lite.json"), Student.class);
+    		Student s = mapper.readValue(new File("data/sample-full.json"), Student.class);
     		
     		System.out.println(s.getFirstName() + " "+s.getLastName()+" active status is : "+s.isActive());
+    		System.out.println(s);
     		
     	}catch(Exception e) {
     		e.printStackTrace();
